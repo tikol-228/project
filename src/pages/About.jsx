@@ -1,7 +1,7 @@
 import React from 'react';
 import { Apple, ChefHat, Zap, DollarSign, HelpCircle } from 'lucide-react';
 // 1. Ваше изображение импортировано - отлично!
-import kebabImg from '../assets/kebab-img.png';
+import kebabImg from '../assets/kebab-img.jpeg';
 
 // -----------------------------------------------------------------
 // ⬇️ ДАННЫЕ "О НАС" ⬇️

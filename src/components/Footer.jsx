@@ -26,7 +26,7 @@ const Footer = () => {
               <li className="flex items-center space-x-3 group">
                 <Phone className="h-5 w-5 text-brand-orange group-hover:text-white transition-colors"/>
                 <a href="tel:+74951234567" className="text-lg text-gray-200 group-hover:text-white transition-colors duration-300">
-                  +7 (495) 123-45-67
+                  +375 29 123456789
                 </a>
               </li>
               <li className="flex items-start space-x-3 group">
@@ -37,7 +37,7 @@ const Footer = () => {
                   rel="noopener noreferrer" 
                   className="text-lg text-gray-200 group-hover:text-white transition-colors duration-300"
                 >
-                  г. Москва, ул. Тверская, 1 (рядом с метро)
+                  г. Минск, ул. Мстиславца, 8 (рядом с метро)
                 </a>
               </li>
             </ul>
@@ -49,7 +49,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3">
               <Clock className="h-5 w-5 text-brand-orange"/>
               <p className="text-lg text-gray-200">
-                Ежедневно: 10:00 – 22:00
+                Ежедневно: 08:00 – 22:00
               </p>
             </div>
           </div>
