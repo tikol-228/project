@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* 1. Плавная прокрутка и высота HTML */
+  html {
+    scroll-behavior: smooth;
+    height: 100%; /* Гарантируем 100% высоты viewport */
+  }
+  
+  /* 2. Высота BODY и базовые стили */
+  body {
+    @apply bg-brand-bg-light text-gray-700 h-full; /* h-full гарантирует 100% высоты HTML */
+    margin: 0; /* Удаляем маржин по умолчанию */
+  }
+}
+
+@layer components {
+  /* Стили для анимированного подчеркивания ссылок в хедере */
+  .nav-link {
+    @apply relative py-2; 
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-brand-orange); 
+    transition: width 0.3s ease-out;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+}

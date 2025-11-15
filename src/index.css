@@ -1,0 +1,140 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Tailwind directives + project utility layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* CSS vars used by some components */
+  --color-brand-orange: #ff7a18;
+  --color-brand-red: #e63946;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-brand-bg-light text-gray-700;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .nav-link { @apply relative py-2; }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-brand-orange);
+    transition: width 0.3s ease-out;
+  }
+  .nav-link:hover::after { width: 100%; }
+}
+
+/* Additional component utilities and layout polish */
+@layer utilities {
+  .container-max { max-width: 1280px; margin-left: auto; margin-right: auto; }
+}
+
+@layer components {
+  header {
+    @apply w-full backdrop-blur-sm;
+  }
+
+  /* Mobile menu panel override for smoother transitions */
+  .mobile-panel {
+    @apply md:hidden absolute top-full left-0 right-0 bg-brand-red/95 text-white shadow-xl;
+  }
+
+  /* Popular badge */
+  .popular-badge {
+    @apply bg-popular-badge text-white px-3 py-1 rounded-full text-sm font-bold shadow pop;
+  }
+
+  /* Icon gradient used in About features */
+  .bg-icon-gradient { background-image: linear-gradient(135deg,#ff7a18,#e63946); }
+
+  /* Footer small polish */
+  footer { @apply text-gray-200 }
+}
+
+/* Small helper - glass card used for feature cells */
+.glass-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.45));
+  backdrop-filter: blur(6px);
+}
