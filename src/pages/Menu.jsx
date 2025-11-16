@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Flame } from 'lucide-react';
 import classic from '../assets/orig.jpg';
 import syrian from '../assets/syrian-kebab.jpg';
-import chicken from '../assets/chicken kebab.webp';
+import potatoe from '../assets/potatoe.jpg';
+import kebab2 from '../assets/kebab2.jpg';
 import baran from '../assets/baran kebab.webp';
 import kav from '../assets/kav-kebab.jpg';
 
@@ -11,7 +12,7 @@ const menuItems = [
     id: 1,
     name: "Классическая шаурма",
     description: "Сочная курочка, свежие овощи, фирменный белый соус, завернутые в хрустящий лаваш.",
-    price: 350,
+    price: 10,
     category: "shawarma",
     img: classic,
     popular: true,
@@ -20,7 +21,7 @@ const menuItems = [
     id: 2,
     name: "Сирийская шаурма",
     description: "Мраморная говядина, пикантный томатный соус, маринованный огурчик и зелень.",
-    price: 400,
+    price: 12,
     category: "shawarma",
     img: syrian,
     popular: true,
@@ -29,7 +30,7 @@ const menuItems = [
     id: 3,
     name: "Острая шаурма",
     description: "Жгучий чили, соус Харисса, много мяса и свежий перец халапеньо для любителей острого.",
-    price: 370,
+    price: 10,
     category: "shawarma",
     img: kav,
     popular: false,
@@ -38,7 +39,7 @@ const menuItems = [
     id: 4,
     name: "Вегетарианская шаурма",
     description: "Сытная шаурма с фалафелем, хумусом, свежими овощами и легким йогуртовым соусом.",
-    price: 320,
+    price: 8,
     category: "shawarma",
     img: baran,
     popular: false,
@@ -47,24 +48,25 @@ const menuItems = [
     id: 5,
     name: "Картофель фри",
     description: "Идеально хрустящие снаружи и мягкие внутри ломтики картофеля, подается с кетчупом.",
-    price: 150,
+    price: 6,
     category: "sides",
-    img: chicken,
+    img: potatoe,
     popular: false,
   },
   {
     id: 6,
-    name: "Салат Табуле",
+    name: "Микс шаурмы",
     description: "Классический ливанский салат из булгура, петрушки, помидоров и лимонного сока.",
-    price: 200,
+    price: 15,
     category: "sides",
+    img: kebab2,
     popular: false,
   },
   {
     id: 7,
     name: "Coca-Cola",
     description: "Охлажденный классический газированный напиток 0.5 л.",
-    price: 100,
+    price: 3.5,
     category: "drinks",
     noDrinkImage: true,
     popular: false,
@@ -73,7 +75,7 @@ const menuItems = [
     id: 8,
     name: "Вода",
     description: "0.5 литров",
-    price: 50,
+    price: 1.5,
     category: "drinks",
     noDrinkImage: true,
     popular: false,
